@@ -1,0 +1,30 @@
+<project name="NoLash" default="jar">
+
+  <property name="build.dir" location="build"/>
+  <property name="src.dir" location="src"/>
+  
+  <target name="clean" description="Clears out old build artifacts.">
+    <delete dir="${build.dir}"/>
+    <delete file="${ant.project.name}.jar"/>
+  </target>
+
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+  </target>
+
+  <target name="compile" depends="init" description="Compiles required code,">
+    <javac destdir="${build.dir}" srcdir="${src.dir}" includes="**/*.java">
+    </javac>
+  </target>
+  
+  <target name="jar" depends="compile" description="Creates an executable jarfile.">
+    <jar destfile="${ant.project.name}.jar"> 
+      <fileset dir="${build.dir}"/>
+      <fileset dir="." includes="src/*,build.xml"/>
+      <manifest>
+        <attribute name="Main-Class" value="NoLash"/>
+      </manifest>
+    </jar>
+  </target>
+
+</project>
