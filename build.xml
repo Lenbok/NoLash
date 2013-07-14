@@ -20,7 +20,7 @@
   <target name="jar" depends="compile" description="Creates an executable jarfile.">
     <jar destfile="${ant.project.name}.jar"> 
       <fileset dir="${build.dir}"/>
-      <fileset dir="." includes="src/*,build.xml"/>
+      <fileset dir="." includes="src/*,build.xml,README.md"/>
       <manifest>
         <attribute name="Main-Class" value="NoLash"/>
       </manifest>

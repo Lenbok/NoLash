@@ -4,10 +4,12 @@ NoLash
 Standalone command-line tool for GCode software backlash compensation.
 
 Based on RepRap NoLash Software BackLash Compensation Tool written by
-Richard White on Jan. 22, 2013 described at
+Richard White described at
 http://forums.reprap.org/read.php?154,178612,182380#msg-182380
 
-Ported to Java by Len Trigg <lenbok@gmail.com>.
+Ported to Java by Len Trigg.
+
+https://github.com/Lenbok/NoLash
 
 
 To Build
